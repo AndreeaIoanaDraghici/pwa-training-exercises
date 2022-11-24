@@ -1,5 +1,5 @@
 {
-  "name": "demo-storefront",
+  "name": "pwa-training-project",
   "version": "0.0.1",
   "license": "See license in LICENSE",
   "private": true,
@@ -7,7 +7,46 @@
     "node": "^12.0.0 || ^14.0.0",
     "npm": "^6.14.4 || ^7.0.0 || ^8.0.0"
   },
+  "mobify": {
+    "externals": [
+      "jsdom"
+    ],
+    "pageNotFoundURL": "/page-not-found",
+    "ssrEnabled": true,
+    "ssrOnly": [
+      "ssr.js",
+      "ssr.js.map",
+      "node_modules/**/*.*"
+    ],
+    "ssrShared": [
+      "static/ico/favicon.ico",
+      "static/robots.txt",
+      "**/*.js",
+      "**/*.js.map",
+      "**/*.json"
+    ],
+    "ssrParameters": {
+      "proxyConfigs": [
+        {
+          "protocol": "https",
+          "host": "kv7kzm78.api.commercecloud.salesforce.com",
+          "path": "api"
+        },
+        {
+          "protocol": "https",
+          "host": "prd.us.shopper.commercecloud.salesforce.com",
+          "path": "slas"
+        },
+        {
+          "protocol": "https",
+          "host": "zzrb-397.dx.commercecloud.salesforce.com",
+          "path": "ocapi"
+        }
+      ]
+    }
+  },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.12",
     "@chakra-ui/react": "^1.7.1",
     "@chakra-ui/skip-nav": "^1.1.4",
     "@emotion/react": "^11.1.5",
