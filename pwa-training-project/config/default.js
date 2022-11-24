@@ -62,7 +62,7 @@ module.exports = {
                 path: 'api'
             },
             {
-                host: 'zzte-053.sandbox.us02.dx.commercecloud.salesforce.com',
+                host: 'zzte-053.dx.commercecloud.salesforce.com',
                 path: 'ocapi'
             },
             {
